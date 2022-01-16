@@ -1,0 +1,145 @@
+/*
+* Theme Name: yourthemename
+* Theme URI: http://website.com;
+* Description: 
+* Version: 1.0
+* Author: Mohammad Rezaei
+* Author URI: https://mohammadrezaei.com
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'slider';
+
+/*
+====================================
+Default Styling
+====================================
+*/
+
+
+@font-face {
+  font-family: 'Yalla Sans';
+  src: url('fonts/SyndicatGrotesk-Regular.otf');
+  font-weight: normal;
+      font-style: normal; 
+}
+@font-face {
+  font-family: 'Yalla Sans Italic';
+  src: url('fonts/SyndicatGrotesk-RegularItalic.otf');
+  font-weight: normal;
+      font-style: normal; 
+}
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+body {
+	font-family: 'Yalla Sans', sans-serif;
+	@include fontSize(11);
+	outline: none;
+}
+.italic{
+	font-family: 'Yalla Sans Italic';
+}
+main {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+
+header {
+	.pageTitle {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+	}
+	.indexCall{
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+	}
+}
+.menuInner {
+	display: none;
+}
+.menuOpen{
+	display: block;
+}
+
+.navigationOpen {
+	position: fixed;
+	z-index: 1;
+	background: white;
+	width:100%;
+	height: 100vh;
+	animation: fadein 1s;
+
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.overflowHidden {
+	overflow: hidden;
+}
+#menu-main-navigation {
+	position: absolute;
+	top: 40vh;
+	left: 50%;
+	text-align: center;
+	padding: 0;
+	list-style: none;
+
+}
+.imshiIs {
+	height: 100vh;
+	.agencyInfo {
+		position: absolute;
+		top: 40vh;
+		left: 35%;
+		.agencyname {
+			@extend .flex;
+			.italic {
+				margin-left: 4px;
+			}
+			marquee {
+				height: 21px;
+				width: 82%;
+				margin-left: 8px;
+				span {
+					display: block;
+				}
+		}
+	}
+}
+
+}
+.menuHome, .scroll {
+	position: relative;
+	top:12vh;
+}
+@keyframes shakeShake {
+     0% {transform: translateY(0px)}
+    33% {transform: translateY(3px) }
+ }
+.scroll {
+	animation: shakeShake .5s infinite;
+}
+
+
+
+
+
