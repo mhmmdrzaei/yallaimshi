@@ -26,7 +26,8 @@
             'container' => false,
             'theme_location' => 'primary'
           )); ?>
-<!--           <section class="projects">
+          <section class="projects">
+            <p>Projects:</p>
             <?php $args = array( 'post_type' => 'portfolio', 
                   'order'       => 'DESC',
                   'posts_per_page' => -1 );
@@ -37,7 +38,7 @@
               </a>
             <?php endwhile; // end the loop?>
              <?php wp_reset_query();?>   
-          </section> -->
+          </section>
         </section>
 
       </section>

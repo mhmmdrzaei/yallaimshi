@@ -35,7 +35,9 @@ Default Styling
     font-size: $sizeValue * 1px;
     font-size: ($sizeValue/10) * 1rem;
 }
-
+img {
+	height: auto;
+}
 .flex {
 	display: flex;
 	flex-flow: row wrap;
@@ -60,11 +62,15 @@ header {
 		position: fixed;
 		top: 20px;
 		right: 20px;
+		z-index: 5;
+		display: none;
 	}
 	.indexCall{
 		position: fixed;
 		bottom: 20px;
 		right: 20px;
+		z-index: 4;
+		display: none;
 	}
 }
 .menuInner {
@@ -72,23 +78,60 @@ header {
 }
 .menuOpen{
 	display: block;
+	margin-top: 6vw;
 }
 
 .navigationOpen {
 	position: fixed;
-	z-index: 1;
-	background: white;
-	width:100%;
-	height: 100vh;
-	animation: fadein 1s;
+	    z-index: 4;
+	    background: #fff;
+	    width: 320px;
+	    height: 101vh;
+	    animation: fadein 1s;
+	    right: 0;
+	    top: 0;
+	    border-left: 2px solid black;
+	    padding: 25px;
 
+}
+
+.navigationClose {
+	position: fixed;
+	    z-index: 4;
+	    background: #fff;
+	    width: 320px;
+	    height: 101vh;
+	    right: -400px;
+	    top: 0;
+	    border-left: 2px solid black;
+	    padding: 25px;
+	 animation: fadeout 2s;
+
+}
+@keyframes fadeout {
+    from {
+        right: 0px;
+    }
+    to {
+        right: -400px;
+    }
+}
+
+.projects {
+	p {
+		margin-bottom: 5px;
+	}
+	a {
+	display: block;
+	margin-bottom: 3px;
+	}
 }
 @keyframes fadein {
     from {
-        opacity:0;
+        right: -400px;
     }
     to {
-        opacity:1;
+        right: 0;
     }
 }
 
@@ -96,10 +139,6 @@ header {
 	overflow: hidden;
 }
 #menu-main-navigation {
-	position: absolute;
-	top: 40vh;
-	left: 50%;
-	text-align: center;
 	padding: 0;
 	list-style: none;
 
@@ -138,8 +177,105 @@ header {
 .scroll {
 	animation: shakeShake .5s infinite;
 }
+//projects 
+.ProjectEach {
+	position: relative;
+	justify-content: space-between;
+	margin: 20px 0 40px;
+	@extend .flex;
+	p {
+		@include fontSize(9);
+	}
+	.top {
+		width: 70%;
+		position: sticky;
+		top: -1px;
+		z-index: 3;
+		background: white;
+		padding: 5px 0;
+	}
+	.side {
+		width: 25%;
+		position: relative;
+		.commentary_text{
+			position: sticky;
+			top: 60px;
+			left: 0;
+		}
+	}
+	.main {
+		width: 65%;
+		h1 {
+			font-size: 8vw;
+			margin: 30px 0;
+			text-align: center;
+		}
+		.about_the_project_text {
+			column-count: 3;
+		}
+	}
+}
+.commentary_text {
+	height: 78vh;
+	overflow: scroll;
+	padding: 7px;
+	border: 2px solid black;
 
+}
 
+::-webkit-scrollbar-track {
+  background: white;
+}
+// .top, .side {
+// 	position: absolute;
+// }
 
+.projectDetails {
+	display: none;
+	section {
+		margin: 10px 0;
+	}
+}
+.projectTitle {
+	 &:after {
+	  content: "\2295";
+	  // padding: 0 6px;
+	  // border: 2px solid black;
+	  // border-radius: 50%;
+	  position: relative;
+	  left: 5px;
+	  @include fontSize(12);
+	}
 
+}
+.minus {
+	&:after {
+		content: "\2296";
+		// @include fontSize(13);
+	}
+}
+.about_the_project_text {
+	margin: 40px 0 0;
+	padding-bottom: 40px;
+	border-bottom: 1px solid grey;
+}
+
+//footer 
+footer {
+	padding: 20px;
+}
+
+// about page
+
+.page-id-25 {
+	.pageTitle, .indexCall {
+		display: block;
+
+	}
+	main {
+		min-height: 85vh;
+		margin-top: 60px;
+
+	}
+} 
 

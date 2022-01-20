@@ -65,7 +65,7 @@ function project_scripts() {
   	null, //version number
   	true //load in footer
   );
-  	wp_deregister_script('bxsliderjs');
+  wp_deregister_script('bxsliderjs');
     wp_enqueue_script(
     	'bxslidejs',
     	"https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js",

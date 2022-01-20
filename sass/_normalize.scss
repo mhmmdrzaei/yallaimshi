@@ -16,3 +16,6 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
    height: 0;
    clear: both;
 }
+html {
+    scroll-behavior: smooth;
+}
