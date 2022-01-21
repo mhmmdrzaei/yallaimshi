@@ -3,8 +3,8 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
+  Developer: Mohammad Rezaei	
+  Site: Yalla Imshi
   Twitter:
   Location:
 

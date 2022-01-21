@@ -46,7 +46,7 @@ function project_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.0.7/css/all.css');
-	wp_enqueue_style('bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
+	wp_enqueue_style('bxslider', '//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'project_styles');
@@ -65,10 +65,11 @@ function project_scripts() {
   	null, //version number
   	true //load in footer
   );
+  
   wp_deregister_script('bxsliderjs');
     wp_enqueue_script(
     	'bxslidejs',
-    	"https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js",
+    	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js",
     	false, //dependencies
     	null, //version number
     	true //load in footer

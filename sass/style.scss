@@ -37,6 +37,7 @@ Default Styling
 }
 img {
 	height: auto;
+	width: 100%;
 }
 .flex {
 	display: flex;
@@ -124,6 +125,7 @@ header {
 .contactInfo {
 	display: none;
 	z-index: 7;
+	width:inherit;
 	background: white;
 	border: 2px solid;
 	position: fixed;
@@ -333,8 +335,38 @@ header {
 	}
 
 }
+.ProjectEach {
+	.top {
+		width: 100%;
+	}
+	.main {
+		order: 2;
+		width: 100%;
+		h1 {
+			@include fontSize(40);
+			line-height: 1.3;
+		}
+		.about_the_project_text {
+			column-count:2;
+		}
+	}
+	.side {
+		order: 1;
+		width: 100%;
+		.commentary_text {
+			height: 33vh;
+			padding: 10px;
+		}
 
 
+	}
+
+} 
+
+.contactInfo {
+	width: 100%;
+	left: 0;
+}
 
 
 }

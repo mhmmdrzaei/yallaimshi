@@ -74,6 +74,15 @@ $(function(){
 
 	$('.open-Contact').click(function(){
 		$('.contactInfo').addClass('contactClicked');
+		if ($('.navigation').hasClass('navigationOpen')) {
+		  // parent.find('.displayText').slideToggle();
+		  $('.navigation').addClass('navigationClose');
+		  // $('.menuInner').removeClass('menuOpen');
+		  // $('.menuInner').addClass('navigationClose');
+		  
+		  $('.navigation').removeClass('navigationOpen');
+		  $('body').removeClass('overflowHidden');
+		} 
 
 
 	});
