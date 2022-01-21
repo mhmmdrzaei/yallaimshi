@@ -57,6 +57,9 @@ main {
 	padding: 0 5%;
 }
 
+h2 {
+	margin: 0;
+}
 header {
 	.pageTitle {
 		position: fixed;
@@ -117,6 +120,29 @@ header {
     }
 }
 
+//contact
+.contactInfo {
+	display: none;
+	z-index: 7;
+	background: white;
+	border: 2px solid;
+	position: fixed;
+	top: 40%;
+	left: 37%;
+	padding: 70px 9%;
+	.close {
+		position: absolute;
+		cursor: pointer;
+		top: 8px;
+		left: 8px;
+	}
+	.copy {
+		cursor: pointer;
+	}
+}
+.contactClicked {
+	display: block;
+}
 .projects {
 	p {
 		margin-bottom: 5px;
@@ -125,6 +151,9 @@ header {
 	display: block;
 	margin-bottom: 3px;
 	}
+}
+.contactUs {
+	cursor: pointer;
 }
 @keyframes fadein {
     from {
@@ -278,4 +307,34 @@ footer {
 
 	}
 } 
+//media quaries
+@media (max-width: 700px) {
 
+.pageTitle, .indexCall {
+	@include fontSize(14);
+}
+header {
+	.pageTitle {
+		top: inherit;
+		bottom: 20px;
+	}
+	.indexCall {
+		top: 20px;
+	}
+}
+.imshiIs {
+	.agencyInfo{
+		left: 0;
+		text-align: center;
+		.agencyname {
+			display: block;
+			text-align: center;
+		}
+	}
+
+}
+
+
+
+
+}

@@ -40,9 +40,26 @@
              <?php wp_reset_query();?>   
           </section>
         </section>
-
+            
       </section>
+      <section class="contactInfo">
+        <section class="close">
+          X
+        </section>
+        <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a> 
+        <span class="copy" data-clipboard-text="<?php the_field('email_address', 'options'); ?>"><i class="far fa-copy"></i></span>
+        
 
+        <?php if( have_rows('social_links', 'options') ): ;?>
+          <section class="socialLinks">
+          <br>
+          Social:
+          <?php while( have_rows('social_links', 'options') ): the_row(); ?>
+            <a href="<?php the_sub_field('social_link'); ?>"><?php the_sub_field('social_icon'); ?></a>
+            <?php endwhile; ?>
+           </section>
+        <?php endif; ?>
+      </section>
 
 
 </header><!--/.header-->

@@ -45,7 +45,7 @@ of writing our own link tags in the header. */
 function project_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
-	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+	wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.0.7/css/all.css');
 	wp_enqueue_style('bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
 }
 

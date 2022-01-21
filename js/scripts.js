@@ -62,16 +62,38 @@ $(function(){
 
 	$(window).scroll(function() {
 	  var y = $(this).scrollTop();
-	  // var x = $(window).width();
-	  if (y > 500){
+	  if ((y > 500) && ($('body').hasClass('page-id-23'))){
 	    $(".pageTitle").fadeIn();
 	    $('.indexCall').fadeIn();
-	  } else if ((y < 500) && (x > 700)) {
+	  } else if ((y < 500) && ($('body').hasClass('page-id-23'))) {
 	    $('.pageTitle').fadeOut(100);
 	    $('.indexCall').fadeOut(100);
 
 	  }
 	});
+
+	$('.open-Contact').click(function(){
+		$('.contactInfo').addClass('contactClicked');
+
+
+	});
+	$('.close').click(function(){
+		$('.contactInfo').removeClass('contactClicked');
+	});
+	$('.copy').on('click', function() {
+		$(this).html('Copied :)')
+	  // finds data-clipboard-test for content p class "click" 
+	  value = $(this).data('clipboard-text'); 
+	  // Temporary input tag to store text
+	  var $temp = $("<input>");
+	  $("body").append($temp);
+	  // Selects text value
+	  $temp.val(value).select();
+	  // Copies text, removes temporary tag
+	  document.execCommand("copy");
+	  $temp.remove();
+	  
+	})
 
 
 	$("a").on('click', function(event) {
