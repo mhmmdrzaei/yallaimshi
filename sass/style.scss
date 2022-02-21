@@ -224,6 +224,12 @@ header {
 		z-index: 3;
 		background: white;
 		padding: 5px 0;
+		.about_the_project_text {
+			column-count: 3;
+			p {
+				margin: 0;
+			}
+		}
 	}
 	.side {
 		width: 25%;
@@ -240,9 +246,6 @@ header {
 			font-size: 8vw;
 			margin: 30px 0;
 			text-align: center;
-		}
-		.about_the_project_text {
-			column-count: 3;
 		}
 	}
 }
@@ -288,7 +291,6 @@ header {
 .about_the_project_text {
 	margin: 40px 0 0;
 	padding-bottom: 40px;
-	border-bottom: 1px solid grey;
 }
 
 //footer 
@@ -338,6 +340,10 @@ header {
 .ProjectEach {
 	.top {
 		width: 100%;
+		// z-index: 1;
+		.about_the_project_text {
+			column-count:2;
+		}
 	}
 	.main {
 		order: 2;
@@ -345,9 +351,6 @@ header {
 		h1 {
 			@include fontSize(40);
 			line-height: 1.3;
-		}
-		.about_the_project_text {
-			column-count:2;
 		}
 	}
 	.side {

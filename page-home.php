@@ -45,7 +45,7 @@
         while ( have_posts() ) : the_post(); ?>
           <section class="ProjectEach">
             <section class="top">
-              <section class="projectTitle" id="<?php the_title(); ?>">
+              <section class="projectTitle" id="<?php the_ID(); ?>">
                   Project:<br><?php the_title(); ?>
               </section>
             <section class="projectDetails">
@@ -69,6 +69,9 @@
                 if( $collaborators ) {; ?>
                 <section class="collaborators">Collaborators:<br><?php the_field('collaborators'); ?></section>
                 <?php } ;?>
+                <section class="about_the_project_text">
+                  <?php the_field('about_the_project_text'); ?>
+                </section>
             </section>
             </section>
               <section class="main">
@@ -95,9 +98,6 @@
                         } endforeach; 
                       ?>
                     </ul>
-                </section>
-                <section class="about_the_project_text">
-                  <?php the_field('about_the_project_text'); ?>
                 </section>
               </section>
               <section class="side">
