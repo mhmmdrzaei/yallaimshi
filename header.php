@@ -33,9 +33,10 @@
                   'posts_per_page' => -1 );
             query_posts( $args ); // hijack the main loop
             while ( have_posts() ) : the_post(); ?>
-              <a href="#<?php the_ID(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-              <?php the_title(); ?>
-              </a>
+<!--               <a href="" title="<?php esc_attr(the_title_attribute()); ?>">
+              
+              </a> -->
+              <a href="https://yalla-imshi.com#<?php the_ID(); ?>"><?php the_title(); ?></a>
             <?php endwhile; // end the loop?>
              <?php wp_reset_query();?>   
           </section>
