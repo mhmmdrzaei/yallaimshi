@@ -74,8 +74,9 @@
                 </section>
             </section>
             </section>
+            <h1><?php the_field('large_text_description'); ?></h1>
               <section class="main">
-                <h1><?php the_field('large_text_description'); ?></h1>
+                
                 <section class="images">
                       <ul class="bxslider">
                       <?php 
@@ -99,12 +100,13 @@
                       ?>
                     </ul>
                 </section>
-              </section>
-              <section class="side">
-                <section class="commentary_text">
-                <?php the_field('commentary_text'); ?>
+                <section class="side">
+                  <section class="commentary_text">
+                  <?php the_field('commentary_text'); ?>
+                  </section>
                 </section>
               </section>
+
             </section>
          
             
