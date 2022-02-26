@@ -103,7 +103,13 @@ $(function(){
 	  document.execCommand("copy");
 	  $temp.remove();
 	  
-	})
+	});
+
+	// var imageHeight = $( '.bx-viewport li img' ).height();
+
+	// console.log (imageHeight);
+
+	// $('.commentary_text').css('height', imageHeight + 'px');
 
 
 	// $("a").on('click', function(event) {

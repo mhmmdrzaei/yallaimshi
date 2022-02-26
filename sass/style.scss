@@ -184,7 +184,8 @@ header {
 	.agencyInfo {
 		position: absolute;
 		top: 40vh;
-		left: 55%;
+		left: 50%;
+		transform: translate(-50%);
 		.agencyname {
 			@extend .flex;
 			.italic {
@@ -246,7 +247,7 @@ header {
 
 	.main {
 		@extend .flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
 		.images {
 			width: 78%;
@@ -264,7 +265,9 @@ header {
 	}
 }
 .commentary_text {
-	height: 80vh;
+	height: 85vh;
+	position: relative;
+	top:5%;
 	overflow: scroll;
 	padding: 7px;
 	border: 2px solid black;
